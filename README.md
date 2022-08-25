@@ -1,7 +1,21 @@
-# Build Web Apps - Demo Code
+## To get into the python virtual environment (These may need to be in cmd and not powershell but still in the directory of your project)
+* run 'py -m venv env'
+* run '.\env\Scripts\activate'
 
-UNC BACS350 - Student Code
+## To upgrade pip
+* run 'python.exe -m pip install --upgrade pip'
 
+## To install django after getting into the virtual encironment and updating pip
+* run 'pip install django'
+
+## Then to start up the project
+* run '.\env\Scripts\activate'
+* run 'python manage.py migrate'
+* run 'python manage.py runserver'
+
+## To exit and write more in the terminal
+* click in the terminal
+* ctrl c
 
 ## Demo Applications
 
