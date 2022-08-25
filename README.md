@@ -10,6 +10,7 @@
 
 ## Then to start up the project
 * run '.\env\Scripts\activate'
+* change to the appropriate directory
 * run 'python manage.py migrate'
 * run 'python manage.py runserver'
 
