@@ -8,7 +8,7 @@
 ## To install django after getting into the virtual encironment and updating pip
 * run 'pip install django'
 
-## Then to start up the project
+## Then to start up the project (in cmd NOT powershell)
 * run '.\env\Scripts\activate'
 * change to the appropriate directory
 * run 'python manage.py migrate'
