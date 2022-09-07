@@ -27,4 +27,4 @@ static_sites:
   name: profile-app-static
   routes:
   - path: /static
-  source_dir: 02/ProfileApp/static
+  source_dir: Superhero/static
