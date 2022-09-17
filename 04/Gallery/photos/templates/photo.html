@@ -7,27 +7,27 @@
     {% if photo.caption %}
     {{ photo.caption }}
     {% else %}
-    whoops
+    {{ photo.id }}
     {% endif%}
 </h3>
 
 <p>
-    <img class="photo" src="/{{ photo.file }}" alt="{{ photo.id }}">
+    <img class="photo" src="/{{ photo.file }}" alt="{{ photo.id }}" width="400">
 </p>
 <p>
-    Strengths:
-    {% if photo.caption %}
-    {{ photo.caption }}
+    Strength:
+    {% if photo.strength %}
+    {{ photo.strength }}
     {% else %}
-    Is a Super Hero
+    {{ photo.id }}
     {% endif%}
 <p>
 </p>
-    Weaknesses:
-    {% if photo.caption %}
-    {{ photo.caption }}
+    Weakness:
+    {% if photo.weakness %}
+    {{ photo.weakness }}
     {% else %}
-    Is a Super Hero
+    {{ photo.id }}
     {% endif%}
 
 </p>
