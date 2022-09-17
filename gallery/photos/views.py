@@ -5,5 +5,15 @@ class PhotoView(TemplateView):
     template_name = 'photo.html'
 
     def get_context_data(self, **kwargs):
-        return {'photo':"/static\images\batman.jpg"}
+        name = kwargs['name']
+        image = f'/static\images\{name}'
+        return {'photo': image}
 
+
+class PhotoListView(TemplateView):
+    template_name = 'photos.html'
+
+    def get_context_data(self, **kwargs):
+        photos = Path('static/images').iterdir()
+        photos = [f for f in enumerate(photos)]
+        return dict(photos=photos)
