@@ -1,12 +1,15 @@
 h1 {
-    color: rgb(222, 21, 202);
+    color: rgb(204, 47, 188);
 }
 
 .header {
     text-align: center;
+    color: rgb(232, 44, 210);
 }
 
 .photo {
     margin: 2em;
     border-radius: 10px;
+    width: 2em;
+    height: 2em;
 }

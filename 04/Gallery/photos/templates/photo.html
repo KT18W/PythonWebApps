@@ -1,25 +1,35 @@
 {% extends 'theme.html' %}
 
-
-
 {% block content %}
 
-<h3>Hero</h3>
-
-<p>
-    <img class="photo" src="/{{ photo.file }}" alt="Chapter {{ photo.id }}">
-</p>
-<p>
-    CAPTION:
+<h3>
+    Name:
     {% if photo.caption %}
     {{ photo.caption }}
     {% else %}
-    Is a super hero
+    whoops
     {% endif%}
+</h3>
 
+<p>
+    <img class="photo" src="/{{ photo.file }}" alt="{{ photo.id }}">
 </p>
 <p>
-    FILE PATH: {{ photo.file }}
+    Strengths:
+    {% if photo.caption %}
+    {{ photo.caption }}
+    {% else %}
+    Is a Super Hero
+    {% endif%}
+<p>
+</p>
+    Weaknesses:
+    {% if photo.caption %}
+    {{ photo.caption }}
+    {% else %}
+    Is a Super Hero
+    {% endif%}
+
 </p>
 
 
