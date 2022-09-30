@@ -5,17 +5,17 @@
 <div class="container">
     <div class="row">
 
-        {% for notes in object_list %}
+        {% for note in object_list %}
 
         <div class="card col-4 m-5 p-5  bg-light text-dark ">
 
             <p>
-                <a href="{{ notes.pk }}">
-                    <b>{{ notes.hero }}</b>
+                <a href="{{ note.pk }}">
+                    <b>{{ note.hero }}</b>
                 </a>
             </p>
             <p>
-                {{ notes.body }}
+                {{ note.body }}
             </p>
 
         </div>
