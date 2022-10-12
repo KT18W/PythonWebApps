@@ -18,3 +18,4 @@ class NoteDetailView(TemplateView):
         return {
             'note': Notes.objects.get(pk=kwargs['pk'])
         }
+

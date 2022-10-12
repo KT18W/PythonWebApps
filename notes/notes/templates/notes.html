@@ -6,9 +6,7 @@
     <div class="row">
 
         {% for note in object_list %}
-
-        <div class="card col-4 m-5 p-5  bg-light text-dark ">
-
+        <button>
             <p>
                 <a href="{{ note.pk }}">
                     <b>{{ note.hero }}</b>
@@ -17,8 +15,7 @@
             <p>
                 {{ note.body }}
             </p>
-
-        </div>
+        </button>
 
         {% endfor %}
 

@@ -1,0 +1,17 @@
+h1 {
+    color: rgb(246, 250, 246);
+}
+
+button{
+    background-color: rgb(250, 69, 208);
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    width: 10px;
+    height: 10vh;
+}
+
+.row{
+    width: 40vh;
+}
