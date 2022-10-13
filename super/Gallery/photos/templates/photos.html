@@ -4,12 +4,22 @@
 
 {% block content %}
 
-{% for photo in photos %}
+<div class="container">
+    <div class="row">
 
-<a href="/photo/{{ photo.id }}">
-    <img class="photo" src="/{{ photo.file }}" alt="Chapter {{ photo.id }}" width="200">
-</a>
+        {% for photo in object_list %}
+        <button class="profileButton">
+            <p>
+                <a href="{{ photo.pk }}">
+                    <b>{{ photo.name }}</b>
+                </a>
+            </p>
+        </button>
 
-{% endfor %}
+        {% endfor %}
+
+    </div>
+
+</div>
 
 {% endblock content %}

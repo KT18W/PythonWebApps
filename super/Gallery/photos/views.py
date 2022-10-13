@@ -1,5 +1,6 @@
 from pathlib import Path
 from django.views.generic import TemplateView
+from .models import Photos
 
 
 def photo_list():
@@ -19,9 +20,11 @@ def photo_list():
 
 class PhotoListView(TemplateView):
     template_name = 'photos.html'
-
+    
     def get_context_data(self, **kwargs):
-        return dict(photos=photo_list())
+        return {
+            'object_list': Photos.objects.all()
+        }
 
 
 class PhotoDetailView(TemplateView):
@@ -32,3 +35,4 @@ class PhotoDetailView(TemplateView):
         photos = photo_list()
         p = photos[i]
         return dict(photo=p)
+
