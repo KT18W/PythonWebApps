@@ -9,3 +9,4 @@ urlpatterns = [
     path('', NoteListView.as_view()),
     path('<int:pk>', NoteDetailView.as_view()),
 ]
+
