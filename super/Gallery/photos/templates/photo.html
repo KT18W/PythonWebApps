@@ -1,0 +1,36 @@
+{% extends 'theme.html' %}
+
+{% block content %}
+
+<h3>
+    Name:
+    {% if photo.caption %}
+    {{ photo.caption }}
+    {% else %}
+    {{ photo.id }}
+    {% endif%}
+</h3>
+
+<p>
+    <img class="photo" src="/{{ photo.file }}" alt="{{ photo.id }}" width="400">
+</p>
+<p>
+    Strength:
+    {% if photo.strength %}
+    {{ photo.strength }}
+    {% else %}
+    {{ photo.id }}
+    {% endif%}
+<p>
+</p>
+    Weakness:
+    {% if photo.weakness %}
+    {{ photo.weakness }}
+    {% else %}
+    {{ photo.id }}
+    {% endif%}
+
+</p>
+
+
+{% endblock content %}
