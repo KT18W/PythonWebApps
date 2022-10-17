@@ -7,4 +7,4 @@ class Photos(models.Model):
     photo = models.ImageField(upload_to='Photos/static/images')
 
     def _str_(self):
-        return f'{self.pk}. {self.name} - {self.strengths} - {self.weaknesses} - {self.photo}'
+        return f'{self.pk}. {self.name}'

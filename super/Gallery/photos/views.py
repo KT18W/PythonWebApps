@@ -36,3 +36,4 @@ class PhotoDetailView(TemplateView):
         p = photos[i]
         return dict(photo=p)
 
+

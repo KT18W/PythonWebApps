@@ -12,5 +12,10 @@ h1 {
 }
 
 .profileButton{
-    background-color: blueviolet;
+    background-color: rgb(79, 32, 124);
+    margin-top: 2vh;
+}
+
+.buttonContainer{
+    width: 12vw;
 }
