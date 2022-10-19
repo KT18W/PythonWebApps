@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Photos
+from .models import Hero
 
-admin.site.register(Photos)
+admin.site.register(Hero)

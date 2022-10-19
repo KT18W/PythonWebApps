@@ -1,10 +1,10 @@
 from django.db import models
 
-class Photos(models.Model):
+class Hero(models.Model):
     name = models.CharField(max_length=200)
     strengths = models.TextField()
     weaknesses = models.TextField()
-    photo = models.ImageField(upload_to='Photos/static/images')
+    photo = models.CharField(max_length=200, default='/static/images/bad.jpg')
 
-    def _str_(self):
+    def __str__(self):
         return f'{self.pk}. {self.name}'

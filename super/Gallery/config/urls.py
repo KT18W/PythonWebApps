@@ -7,12 +7,9 @@ from photos.views import PhotoDetailView, PhotoListView
 
 urlpatterns = [
 
-    # Home
-    path('', RedirectView.as_view(url='photo/')),
-
     #database
     path('admin/', admin.site.urls),
     # Photos
-    path('photo/', PhotoListView.as_view()),
-    path('photo/<int:id>', PhotoDetailView.as_view()),
+    path('', PhotoListView.as_view()),
+    path('<int:id>', PhotoDetailView.as_view()),
 ]

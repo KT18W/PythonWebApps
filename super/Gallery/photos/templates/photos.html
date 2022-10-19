@@ -7,11 +7,11 @@
 <div class="buttonContainer">
     <div class="row">
 
-        {% for photo in object_list %}
+        {% for hero in object_list %}
         <button class="profileButton">
             <p>
-                <a href="{{ photo.pk }}">
-                    <b>{{ photo.name }}</b>
+                <a href="{{ hero.pk }}">
+                    <b>{{ hero.name }}</b>
                 </a>
             </p>
         </button>
