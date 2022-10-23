@@ -4,24 +4,24 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Python: Django Test",
-            "type": "python",
-            "request": "launch",
-            "program": "manage.py",
-            "cwd": "${workspaceFolder}/11/Book",
-            "args": [
-                "test"
-            ],
-            "django": true,
-            "justMyCode": true
-        },
+        // {
+        //     "name": "Python: Django Test",
+        //     "type": "python",
+        //     "request": "launch",
+        //     "program": "manage.py",
+        //     "cwd": "${workspaceFolder}/11/Book",
+        //     "args": [
+        //         "test"
+        //     ],
+        //     "django": true,
+        //     "justMyCode": true
+        // },
         {
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/11/Book",
+            "cwd": "${workspaceFolder}/super/Gallery",
             "args": [
                 "runserver",
                 "8001"

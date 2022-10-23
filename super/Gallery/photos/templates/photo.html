@@ -11,12 +11,35 @@
     <img class="photo" src="{{ hero.photo }}" alt="{{ hero.name }}" width="400">
 </p>
 <p>
+    Identity:
+    {{hero.identity}}
+</p>
+<p>
     Strengths:
     {{ hero.strengths }}
 <p>
 </p>
     Weaknesses:
     {{ hero.weaknesses }}
+</p>
+<p>
+    Description:
+    {{hero.description}}
 </p> 
 
+<button class="profileButton">
+    <p>
+        <a href="{{ hero.pk }}/edit">
+            <b>Edit Hero</b>
+        </a>
+    </p>
+</button>
+<button class="profileButton">
+    <p>
+        <a href="{{ hero.pk }}/delete">
+            <b>Delete Hero</b>
+        </a>
+    </p>
+</button>
+<a href="/" class="btn bg-success text-light m-5">All Heros</a>
 {% endblock content %}
