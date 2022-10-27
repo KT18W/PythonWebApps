@@ -17,14 +17,13 @@
         //     "justMyCode": true
         // },
         {
-            "name": "Python: Django",
+            "name": "runserver",
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/super/Gallery",
+            "cwd": "${workspaceFolder}/Superhero",
             "args": [
-                "runserver",
-                "8001"
+                "runserver"
             ],
             "django": true,
             "justMyCode": true

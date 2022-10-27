@@ -8,6 +8,10 @@
 ## To install django after getting into the virtual encironment and updating pip
 * run 'pip install django'
 
+## To use crispy forms
+* run 'pip install django-crispy-forms'
+* put 'crispy_forms' into your installed apps in settings inside config
+
 ## Then to start up the project (in cmd NOT powershell)
 * run '.\env\Scripts\activate'
 * change to the appropriate directory

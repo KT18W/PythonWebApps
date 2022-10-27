@@ -21,11 +21,9 @@ class PhotoDetailView(TemplateView):
 
 
 class HeroCreateView(CreateView):
-    template_name = 'add.html'
-
-    def get_context_data(self, **kwargs):
-        i = kwargs['id']
-        return dict(hero=Hero.objects.get(pk=i))
+    template_name = "add.html"
+    model = Hero
+    fields = '__all__'
 
 class HeroUpdateView(UpdateView):
     template_name = "edit.html"
@@ -36,7 +34,7 @@ class HeroUpdateView(UpdateView):
 class HeroDeleteView(DeleteView):
     model = Hero
     template_name = 'delete.html'
-    success_url = reverse_lazy('')
+    success_url = reverse_lazy('hero_list')
 
 
 
