@@ -21,7 +21,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/Superhero",
+            "cwd": "${workspaceFolder}/super/gallery",
             "args": [
                 "runserver"
             ],
