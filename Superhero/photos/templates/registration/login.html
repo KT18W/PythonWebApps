@@ -19,8 +19,11 @@
         {{ form|crispy }}
 
         <button type="submit" class="btn btn-success m-5">Log In</button>
+        <p>Don't have an account?</p>
+        <a href="{% url 'author_add' %}">Sign Up instead!</a>
     </form>
 
+    
 </div>
 
 {% endblock content %}
