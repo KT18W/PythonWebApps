@@ -12,12 +12,12 @@
             <li class="nav-item">
                 {% if user.is_authenticated %}
 
-                {% comment %} <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link  text-light " href="{% url 'logout' %}">Hello {{ user.username }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link  text-light " href="{% url 'logout' %}">Log out</a>
-                </li> {% endcomment %}
+                </li>
 
                 {% else %}
 
@@ -25,9 +25,9 @@
                     <a class="nav-link  text-light " href="{% url 'login' %}">Log In</a>
                 </li>
 
-                {% comment %} <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link  text-light " href="{% url 'author_add' %}">Sign Up</a>
-                </li> {% endcomment %}
+                </li>
 
                 {% endif %}
             </li>
