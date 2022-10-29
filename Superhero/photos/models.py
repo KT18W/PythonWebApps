@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse_lazy
 
 class Hero(models.Model):
-    name = models.CharField(max_length=200, default='strengths')
+    name = models.CharField(max_length=200, default='name')
     strengths = models.TextField(max_length=500, default='strengths')
     weaknesses = models.TextField(max_length=500, default='weaknesses')
     identity = models.TextField(max_length=200, default='identity')
