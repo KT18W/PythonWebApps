@@ -1,9 +1,18 @@
+from django.views.generic import RedirectView
+from django.contrib import admin
 from django.urls import path
-from hero.views import BatmanView, SpidermanView, IndexView, GrootView
+
+from photos.views import PhotoDetailView, PhotoListView, HeroCreateView, HeroDeleteView, HeroUpdateView
+
 
 urlpatterns = [
-    path('', IndexView.as_view()),
-    path('spiderman', SpidermanView.as_view()),
-    path('groot', GrootView.as_view()),
-    path('batman', BatmanView.as_view()),
+
+    #database
+    path('admin/', admin.site.urls),
+    # Photos
+    path('', PhotoListView.as_view(), name='hero_list'),
+    path('<int:id>', PhotoDetailView.as_view()),
+    path('add', HeroCreateView.as_view(),  name='add'),
+    path('<int:pk>/edit', HeroUpdateView.as_view(),  name='edit'),
+    path('<int:pk>/delete', HeroDeleteView.as_view(),  name='delete'),
 ]
