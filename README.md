@@ -4,6 +4,7 @@
 
 ## To upgrade pip
 * run 'python.exe -m pip install --upgrade pip'
+* run 'pip install requests'
 
 ## To install django after getting into the virtual encironment and updating pip
 * run 'pip install django'
