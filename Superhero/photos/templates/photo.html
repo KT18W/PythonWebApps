@@ -27,18 +27,6 @@
     {{hero.description}}
 </p> 
 
-<button class="profileButton">
-    <p>
-        <a href="{{ hero.pk }}/edit">
-            <b>Edit Hero</b>
-        </a>
-    </p>
-</button>
-<button class="profileButton">
-    <p>
-        <a href="{{ hero.pk }}/delete">
-            <b>Delete Hero</b>
-        </a>
-    </p>
-</button>
+<a href="{{ hero.pk }}/edit" class="btn btn-info" role="button">Edit Hero</a>
+<a href="{{ hero.pk }}/delete" class="btn btn-info" role="button">Delete Hero</a>
 {% endblock content %}
