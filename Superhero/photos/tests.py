@@ -8,7 +8,7 @@ class PhotosAppTest(SimpleTestCase):
         self.assertTrue(True)
 
 class PhotoDataTest(TestCase):
-    def test_blog(self):
+    def test_hero(self):
         Hero.objects.create(name = 'Name')
         self.assertTrue(Hero.objects.all())
 
@@ -26,4 +26,18 @@ class PhotoListViewTest(TestCase):
     def test_photo_list_view(self):
         self.assertEqual(reverse("hero_list"), "/")
 
+    def test_hero_detail_view(self):
+        Hero.objects.create(name = 'hero1')
+        self.assertEqual(reverse('detail_view', args='1'), '/1')
+        response = self.client.get(reverse('detail_view', args='1'))
+        self.assertContains(response, 'body')
+
+    def test_add_view(self):
+        self.assertTrue('/add')
+
+    def test_edit_view(self):
+        self.assertTrue('/edit')
+
+    def test_delete_view(self):
+        self.assertTrue('/delete')
     
