@@ -26,6 +26,15 @@ h1 {
     width: 12vw;
 }
 
+.card{
+    margin-top: 2vh;
+    background-color: black;
+}
+
+.card-img-top{
+    margin-top: 10px;
+}
+
 .fixed-bottom {
     position: fixed;
     right: 0;
