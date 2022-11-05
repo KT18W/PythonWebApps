@@ -23,18 +23,18 @@ class PhotoDetailView(TemplateView):
         return dict(hero=Hero.objects.get(pk=i))
 
 
-class HeroCreateView(CreateView):  #(LoginRequiredMixin, CreateView)
+class HeroCreateView(LoginRequiredMixin, CreateView):  
     template_name = "add.html"
     model = Hero
     fields = '__all__'
 
-class HeroUpdateView(UpdateView): #(LoginRequiredMixin, CreateView)
+class HeroUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "edit.html"
     model = Hero
     fields = '__all__'
 
 
-class HeroDeleteView(DeleteView): #(LoginRequiredMixin, CreateView)
+class HeroDeleteView(LoginRequiredMixin, DeleteView):
     model = Hero
     template_name = 'delete.html'
     success_url = reverse_lazy('hero_list')
