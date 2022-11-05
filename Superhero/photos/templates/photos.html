@@ -8,14 +8,7 @@
     <div class="row">
 
         {% for hero in object_list %}
-        <button class="profileButton">
-            <p>
-                <a href="{{ hero.pk }}">
-                    <b>{{ hero.name }}</b>
-                </a>
-            </p>
-        </button>
-
+        <a href="{{ hero.pk }}" class="btn btn-info" role="button">{{ hero.name }}</a>
         {% endfor %}
 
     </div>
