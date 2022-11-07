@@ -58,8 +58,9 @@ services:
   routes:
   - path: /
   run_command: |-
-    gunicorn --worker-tmp-dir /dev/shm config.wsgi
+    python manage.py migrate --no-input
     python manage.py createsuperuser --no-input
+    gunicorn --worker-tmp-dir /dev/shm config.wsgi
   source_dir: Superhero
 static_sites:
 - environment_slug: html
