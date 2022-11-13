@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Thor",
+        "strengths": "strengths",
+        "weaknesses": "weaknesses",
+        "identity": "identity",
+        "description": "description",
+        "photo": "/static/images/thor.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Hulk",
+        "strengths": "strengths",
+        "weaknesses": "weaknesses",
+        "identity": "identity",
+        "description": "description",
+        "photo": "/static/images/hulk.jpg"
+    }
+]
