@@ -8,7 +8,7 @@
     <div class="row">  
         {% for hero in object_list %}      
                 <div class="card border-info" style="width: 18rem;">
-                    <img class="card-img-top" src={{ hero.photo }} alt="Hero image">
+                    <img class="card-img-top" src={{ hero.photo.url }} alt="Hero image">
                     <div class="card-body">
                         <h5 class="card-title">{{ hero.name }}</h5>
                         <p class="card-text">{{hero.description}}</p>

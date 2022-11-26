@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 from os import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,17 +78,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-# DATABASES = {
-#     "default": {
-#         "ENGINE": environ.get("DATABASE_ENGINE"),
-#         "NAME": environ.get("DATABASE_NAME"),
-#     }
-# }
 
 POSTGRES_DB = environ.get("POSTGRES_DB")  # database name
 POSTGRES_PASSWORD = environ.get("POSTGRES_PASSWORD")  # database user password
@@ -158,8 +148,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = 'static_assets/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

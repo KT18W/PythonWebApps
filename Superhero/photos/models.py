@@ -8,7 +8,7 @@ class Hero(models.Model):
     weaknesses = models.TextField(max_length=500, default='weaknesses')
     identity = models.TextField(max_length=200, default='identity')
     description = models.TextField(max_length=2000, default='description')
-    photo = models.CharField(max_length=200, default='/static/images/bad.jpg')
+    photo = models.ImageField(null=True, blank=True, upload_to="images/")
 
     def __str__(self):
         return self.name
@@ -19,8 +19,19 @@ class Hero(models.Model):
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
     bio = models.TextField()
-    #attempt at foreign key
-    #hero = models.ForeignKey(Hero, on_delete=models.CASCADE, editable=False)
 
     def __str__(self):
         return f'{self.user.username}'
+
+
+class Photo (models.Model):
+
+    hero = models.ForeignKey(Author, on_delete=models.CASCADE, editable=False)
+    title = models.CharField(max_length=100)
+    image = models.ImageField(null=True, blank=True, upload_to="images/")
+
+    def __str__(self):
+        return f'{self.pk} - {self.title}'
+
+    def get_absolute_url(self):
+        return reverse_lazy('photo_detail', args=[str(self.id)])
