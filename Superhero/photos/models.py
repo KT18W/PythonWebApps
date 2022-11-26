@@ -8,6 +8,7 @@ class Hero(models.Model):
     weaknesses = models.TextField(max_length=500, default='weaknesses')
     identity = models.TextField(max_length=200, default='identity')
     description = models.TextField(max_length=2000, default='description')
+    notes = models.TextField(max_length=2000, default='notes')
     photo = models.ImageField(null=True, blank=True, upload_to="images/")
 
     def __str__(self):

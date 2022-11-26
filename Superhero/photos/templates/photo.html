@@ -1,32 +1,48 @@
 {% extends 'theme.html' %}
 
 {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h3>
+                Name:
+                {{hero.name}}
+            </h3>
 
-<h3>
-    Name:
-    {{hero.name}}
-</h3>
+            <p>
+                <img class="photo" src="{{ hero.photo.url }}" alt="{{ hero.name }}" width="400">
+            </p>
+            <p>
+                Identity:
+                {{hero.identity}}
+            </p>
+            <p>
+                Strengths:
+                {{ hero.strengths }}
+            <p>
+            </p>
+                Weaknesses:
+                {{ hero.weaknesses }}
+            </p>
+            <p>
+                Description:
+                {{hero.description}}
+            </p> 
 
-<p>
-    <img class="photo" src="{{ hero.photo.url }}" alt="{{ hero.name }}" width="400">
-</p>
-<p>
-    Identity:
-    {{hero.identity}}
-</p>
-<p>
-    Strengths:
-    {{ hero.strengths }}
-<p>
-</p>
-    Weaknesses:
-    {{ hero.weaknesses }}
-</p>
-<p>
-    Description:
-    {{hero.description}}
-</p> 
-
-<a href="{{ hero.pk }}/edit" class="btn btn-info" role="button">Edit Hero</a>
-<a href="{{ hero.pk }}/delete" class="btn btn-info" role="button">Delete Hero</a>
+            <a href="{{ hero.pk }}/edit" class="btn btn-info" role="button">Edit Hero</a>
+            <a href="{{ hero.pk }}/delete" class="btn btn-info" role="button">Delete Hero</a>
+        </div>
+        <div class="col-sm">
+            <h3>
+                Notes about hero:
+            </h3>
+            <div class="notes-container">
+                <p>
+                    {{hero.notes}}
+                </p>
+            </div>
+            <a href="{{ hero.pk }}/edit" class="btn btn-info" role="button">Edit Notes</a>
+        </div>
+    </div>
+</div>
 {% endblock content %}
