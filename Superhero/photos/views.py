@@ -23,23 +23,11 @@ class NotesView(TemplateView):
         }
 
 class CarouselView(TemplateView):
-    template_name = 'carousel.html'
-
+    template_name = 'Carousel.html'
     def get_context_data(self, **kwargs):
-        photos = Hero.objects.all()
-        carousel = carousel_data(photos)
-        return dict(title='Carousel View', carousel=carousel)
-
-
-def carousel_data(photos):
-
-    def photo_data(id, image):
-        x = dict(image_url=f"/media/{Hero.photo}", id=str(id), label=f"{Hero.photo} {id}")
-        if id == 0:
-            x.update(active="active", aria='aria-current="true"')
-        return x
-
-    return [photo_data(id, Hero.pk) for id, Hero.photo in enumerate(photos)]
+        return {
+            'object_list': Hero.objects.all()
+        }
 
 class PhotoDetailView(TemplateView):
     template_name = 'photo.html'
