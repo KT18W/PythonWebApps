@@ -9,10 +9,21 @@ def build_code():
     print('build_code()')
     # generate_software_planner()
     # generate_static_site
-    generate_course()
+    # generate_course()
     # generate_messenger()
     # generate_blog()
     # generate_book()
+    generate_notes()
+
+def generate_notes():
+    project_path = Path('\Users\Galax\Desktop\PythonWebApps')
+    project_name = 'Notes'
+    project_app = 'notes'
+    project_path = create_new_project(project_path, project_name)
+    # create_new_app(project_path, project_app)
+    generate_data_type(project_path, project_app, 'Person', "person")
+    generate_data_type(project_path, project_app, 'Message', "message")
+    system(f'tree {project_path}')
 
 
 def generate_book():
@@ -67,7 +78,7 @@ def generate_software_planner():
 
 
 def generate_course():
-    project_path = Path('/Users/seaman/Github/PythonWebApps/15')
+    project_path = Path('C:\Users\Galax\Desktop\PythonWebApps')
     project_name = 'Course'
     project_app = 'course'
     project_path = create_new_project(project_path, project_name)
