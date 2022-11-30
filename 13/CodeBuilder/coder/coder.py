@@ -16,7 +16,7 @@ def build_code():
     generate_notes()
 
 def generate_notes():
-    project_path = Path('\Users\Galax\Desktop\PythonWebApps')
+    project_path = Path('C:/Users/Galax/Desktop/PythonWebApps')
     project_name = 'Notes'
     project_app = 'notes'
     project_path = create_new_project(project_path, project_name)
@@ -78,7 +78,7 @@ def generate_software_planner():
 
 
 def generate_course():
-    project_path = Path('C:\Users\Galax\Desktop\PythonWebApps')
+    project_path = Path('C:/Users/Galax/Desktop/PythonWebApps')
     project_name = 'Course'
     project_app = 'course'
     project_path = create_new_project(project_path, project_name)
